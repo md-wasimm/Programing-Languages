@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This for collecting the data of your school">
+    <link rel="icon" href="favicon-16x16.png">
+    <title>Travel Form</title>
+</head>
+
+<body>
+    <form action="form.php">
+        <h1>Travel Form For Picnic</h1>
+        <label for="name">Enter Your Name</label>
+        <input type="text" placeholder="Enter Your Name" id="name"> <br>
+        <label for="roll">Enter Your Roll</label>
+        <input type="number" placeholder="Enter Your Roll" id="roll"> <br>
+        <label for="email">Enter Your Gmail</label>
+        <input type="email" name="email" id="email" pattern="@gmail.com" placeholder="Gmail">
+        <p>Please select your section:</p>
+        <label for="sectionida">Section A</label>
+        <input type="radio" name="section" id="sectionida">
+        <label for="sectionidb">Section B</label>
+        <input type="radio" name="section" id="sectionidb">
+        <label for="sectionidc">Section C</label>
+        <input type="radio" name="section" id="sectionidc"> <br>
+        <p>Who is coming with you?</p>
+        <label for="farther">Father</label>
+        <input type="radio" name="parent" id="farther">
+        <label for="mother">Mother</label>
+        <input type="radio" name="parent" id="mother"> <br>
+
+        <label for="canteen">Want Food Canteen</label>
+        <input type="checkbox" name="foodcanteen" id="canteen"> <br>
+
+        <label for="place">Select which place you want to visit?</label>
+        <select name="place" id="place">
+            <option value="no place">Select Place</option>
+            <option value="niccopark">Nicco Park</option>
+            <option value="sciencecity">Science City</option>
+            <option value="waterpark">Water Park</option>
+            <option value="zoo">Zoo</option>
+        </select> <br>
+        <textarea name="explain" id="" cols="30" rows="10" placeholder="Explain why you want to come"></textarea> <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

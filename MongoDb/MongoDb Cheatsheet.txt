@@ -1,0 +1,104 @@
+1. Database Commands
+   
+View all databases - show dbs
+
+Create a new or switch databases - use dbName
+
+View current Database - db
+
+Delete Database - db.dropDatabase()
+
+
+
+2. Collection Commands
+
+Show Collections - show collections
+
+Create a collection named 'comments' - db.createCollection('comments')
+
+Drop a collection named 'comments' - db.comments.drop()
+
+
+
+3. Row(Document) Commands
+
+Show all Rows in a Collection - db.blogtable.find()
+
+Show all Rows in a Collection (Prettified) - db.blogtable.find().pretty()
+
+Find the first row matching the object - db.blogtable.findOne({name: 'Harry'})
+
+Insert One Row - 
+
+db.startable.insert({
+    'name': 'Harry',
+    'lang': 'JavaScript',
+    'member_since': 5
+ })
+
+Insert many Rows -
+
+db.blogtable.insertMany([{
+    'name': 'Harry',
+    'lang': 'JavaScript',
+    'member_since': 5
+    }, 
+    {'name': 'Rohan',
+    'lang': 'Python',
+    'member_since': 3
+    },
+    {'name': 'Lovish',
+    'lang': 'Java',
+    'member_since': 4
+}])
+
+Search in a MongoDb Database - db.blogtable.find({name:'Harry'})
+
+Search in a MongoDb Database only one output - db.blogtable.findOne({name:'Harry'})
+
+Limit the number of rows in output - db.comments.find().limit(2)
+
+Count the number of rows in the output - db.comments.find().count()
+
+Count the specific search - db.blogtable.find({name:'Arif',lang:'Bengali'}).count()
+
+
+To sort the rows in accending - db.blogtable.find().sort({member_since:1})
+
+To sort the rows in decending - db.blogtable.find().sort({member_since:-1})
+
+Update a row - 
+
+db.blogtable.update({ name: 'Arif' },
+{$set: { 'name': 'ArifUddin', 
+         'lang': 'Bengali', 
+         'member_since': 10 }})
+
+db.blogtable.updateOne({name: 'Shubham'},
+{$set: {'name': 'Harry',
+    'lang': 'JavaScript',
+    'member_since': 9
+}}, {upsert: true})
+
+Mongodb Increment Operator -
+
+db.blogtable.update({name: 'Rohan'},
+{$inc:{
+    member_since: 2
+}})
+
+Mongodb Rename Operator - 
+
+db.blogtable.update({name: 'Rohan'},
+{$rename:{
+    'member_since': 'member'
+}})
+
+Delete Row - db.blogtable.remove({name: 'Lovish'})
+
+Less than/Greater than/ Less than or Eq/Greater than or Eq - 
+
+db.blogtable.find({member_since: {$lt: 90}})
+db.blogtable.find({member_since: {$lte: 90}})
+db.blogtable.find({member_since: {$gt: 90}})
+db.blogtable.find({member_since: {$gte: 90}})

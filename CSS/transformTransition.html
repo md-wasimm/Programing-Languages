@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .container {
+            background-color: rgb(3, 179, 248);
+            height: 50vh;
+            color: white;
+        }
+
+        .box {
+            display: inline-block;
+            transform: translate(100px, 50px);
+            /* transform-origin: 0px; */
+            /* transform: scale(2, 4); */
+            /* transform: skew(4deg, 3deg); */
+            /* transform: rotate(30deg); */
+        }
+
+        img {
+            width: 600px;
+            /* transition-property: width;
+            transition-duration: 2s;
+            transition-timing-function: ease-in;
+            transition-delay: .5s; */
+            transition: width 2s ease-in-out .5s, height 1s ease-in-out .5s;
+        }
+
+        img:hover {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img id="img" src="https://source.unsplash.com/1000x650/?nature,water" alt="Water falls">
+            <button id="btn">Toggle</button>
+        </div>
+    </div>
+
+</body>
+<script>
+    img.style.width = '150px';
+    img.style.height = '150px';
+
+    btn.addEventListener('click',  () => {
+      if ( img.style.width === '150px',  img.style.height === '150px') {
+        img.style.width = '600px';  img.style.height = '600px';
+    }
+        else if (img.style.width === '600px',  img.style.height === '600px') {
+            img.style.width = '150px';  img.style.height = '150px';
+        }
+    })
+</script>
+
+</html>

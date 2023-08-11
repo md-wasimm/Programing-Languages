@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 8</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black;
+            height: 10vh;
+        }
+
+        main {
+            background-color: cadetblue;
+            height: 90vh;
+        }
+
+        .progressbar {
+            background-color: crimson;
+            height: .5vh;
+            animation: Proganimate 1s ease-in-out 1;
+        }
+
+        img {
+            animation: imganimate 1s ease-in-out infinite;
+        }
+        .box{
+            background-color: white;
+            height: 50vh;
+            overflow: hidden;
+        }
+        @keyframes imganimate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes Proganimate {
+            0% {
+                width: 0vw;
+            }
+
+            50% {
+                width: 90vw;
+            }
+
+            100% {
+                width: 100vw;
+            }
+        }
+      
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="progressbar">
+
+        </div>
+
+    </header>
+    <main>
+        <img src="img.png" alt="" width="200px" height="200px">
+      
+        </div>
+
+    </main>
+</body>
+
+</html>

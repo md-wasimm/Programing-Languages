@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: burlywood;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .box {
+            background-color: cyan;
+            height: 30vh;
+            width: 40vw;
+            /* animation-name: Animate;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-delay: .5s; */
+            animation: Animate 2s ease-in-out .5s infinite alternate-reverse;
+        }
+        .box1{
+            background-color: rgb(247, 0, 255);
+            height: 30vh;
+            width: 40vw;
+            animation: Animate1 2s ease-in-out .5s infinite alternate-reverse;
+        }
+
+        @keyframes Animate {
+            from {
+                height: 30vh;
+                width: 40vw;
+            }
+
+            to {
+                height: 50vh;
+                width: 60vw;
+            }
+        }
+        @keyframes Animate1 {
+            0% {
+                height: 30vh;
+                width: 40vw;
+            }
+            50% {
+                height: 45vh;
+                width: 55vw;
+            }
+
+            100% {
+                height: 50vh;
+                width: 60vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box1"></div>
+    </div>
+</body>
+
+</html>

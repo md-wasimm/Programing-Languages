@@ -1,0 +1,9 @@
+.red{
+    background-color: rgba(255, 72, 0, 0.692);
+    color: seashell;
+    height: 340px;
+}
+.green{
+    background-color:rgba(255, 4, 221, 0.678);
+    color: seashell;
+}
